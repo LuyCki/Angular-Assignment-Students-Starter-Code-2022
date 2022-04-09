@@ -1,0 +1,8 @@
+
+<div *ngIf="product?.isAvailable">
+  <h1 [ngClass]="product?.isPremium ? 'isPremium' : ''" >{{ product?.title }}</h1>
+  <p>Description: {{ product?.description }}</p>
+  <p>Price: {{ product?.price }}</p>
+  <img [src]="product?.imageLink"/>
+</div>
+
