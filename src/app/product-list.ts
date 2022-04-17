@@ -7,7 +7,8 @@ export const products: Product[] = [
       description: 'Iphone 5s description',
       isAvailable: true,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: true
+      isPremium: true,
+      created: new Date
   },
   {
       title: 'Samsung s5',
@@ -15,7 +16,8 @@ export const products: Product[] = [
       description: 'Samsung s5 description',
       isAvailable: true,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: false
+      isPremium: false,
+      created: new Date
   },
   {
       title: 'Samsung s20',
@@ -23,7 +25,8 @@ export const products: Product[] = [
       description: 'Samsung s20 description',
       isAvailable: true,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: false
+      isPremium: false,
+      created: new Date
   },
   {
       title: 'Xiaomi MI',
@@ -31,7 +34,8 @@ export const products: Product[] = [
       description: 'Xiaomi MI description',
       isAvailable: true,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: false
+      isPremium: false,
+      created: new Date
   },
   {
       title: 'Xiaomi Note 10',
@@ -39,7 +43,8 @@ export const products: Product[] = [
       description: 'Xiaomi Note 10 description',
       isAvailable: true,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: true
+      isPremium: true,
+      created: new Date
   },
   {
       title: 'Sony Xperia',
@@ -47,7 +52,8 @@ export const products: Product[] = [
       description: 'Sony Xperia description',
       isAvailable: false,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: false
+      isPremium: false,
+      created: new Date
   },
   {
       title: 'Iphone X',
@@ -55,6 +61,7 @@ export const products: Product[] = [
       description: 'Iphone X description',
       isAvailable: true,
       imageLink: 'https://picsum.photos/200/300',
-      isPremium: true
+      isPremium: true,
+      created: new Date
   }
 ];

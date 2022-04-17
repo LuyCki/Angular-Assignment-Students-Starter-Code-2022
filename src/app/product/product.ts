@@ -5,4 +5,5 @@ export interface Product {
   imageLink: string;
   isPremium: boolean
   isAvailable: boolean;
+  created: Date;
 }
