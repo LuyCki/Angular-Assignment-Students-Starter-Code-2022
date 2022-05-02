@@ -1,4 +1,10 @@
-<app-create-product (addProductEvent)="addProduct($event)"></app-create-product>
+<app-create-product></app-create-product>
 
+<button (click)="removeAllProducts()">Remove all products</button>
+
+<div>
+  <h5>Search product by title</h5>
+  <input type="text" [ngModel]="title" (ngModelChange)="onSearchByTitle($event)">
+</div>
 <app-product *ngFor="let product of products" [product]="product"></app-product>
 

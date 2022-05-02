@@ -3,9 +3,14 @@
     {{ product?.title }}
   </h1>
 
-  <p>Description: {{ product?.description }}</p>
+  <p [setColor]="descriptionColor" defaultColor="yellow" backgroundColor="red">Description: {{ product?.description }}</p>
+  <input type="color" [(ngModel)]="descriptionColor">
   <p>Price: {{ product?.price }}</p>
 
   <img [src]="product?.imageLink" />
   <p>{{ product.created | date: "dd MMM yyyy" }}</p>
+
+  <button (click)="removeProduct()">Remove</button>
+
+  <app-edit-product [product]="product"></app-edit-product>
 </ng-container>

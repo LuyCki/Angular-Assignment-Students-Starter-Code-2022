@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ProductService } from '../core/product.service';
 import { Product } from '../product/product';
 
 @Component({
@@ -8,6 +9,7 @@ import { Product } from '../product/product';
 })
 export class CreateProductComponent {
   public product: Product = {
+    id: 0,
     title: '',
     description: '',
     price: 0,
@@ -17,11 +19,13 @@ export class CreateProductComponent {
     created: new Date
   };
 
-  @Output() public addProductEvent = new EventEmitter<Product>();
+  public products: any;
 
-  constructor() { }
+  constructor(private readonly productService: ProductService) {
+    this.productService.products$.subscribe((products: Product[]) => this.products = products);
+   }
 
   public addProduct(): void {
-    this.addProductEvent.emit(this.product);
+    this.productService.addProduct({ ...this.product, created: new Date, id: Date.now() + Math.random() });
   }
 }

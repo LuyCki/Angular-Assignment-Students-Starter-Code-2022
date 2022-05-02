@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from './product-list';
+import { ProductService } from './core/product.service';
 import { Product } from './product/product';
 @Component({
   selector: 'app-root',
@@ -8,14 +8,19 @@ import { Product } from './product/product';
 })
 export class AppComponent implements OnInit {
   public products: Product[] = [];
+  public title = '';
 
-  constructor() {}
+  constructor(private readonly productService: ProductService) {}
 
   public ngOnInit(): void {
-    this.products = products;
+    this.productService.products$.subscribe((products: Product[]) => this.products = products);
   }
 
-  public addProduct(product: Product): void {
-    this.products.push(product);
+  public removeAllProducts(): void {
+    this.productService.removeAllProducts();
+  }
+
+  public onSearchByTitle(title: string): void{
+    this.productService.searchByTitle(title);
   }
 }

@@ -1,0 +1,35 @@
+<button (click)="isEdit = !isEdit">Edit</button>
+
+<ng-container *ngIf="isEdit">
+  <div>
+    <label for="title">Title</label>
+    <input type="text" id="title" [(ngModel)]="product.title" />
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <input type="text" id="description" [(ngModel)]="product.description" />
+  </div>
+
+  <div>
+    <label for="price">Price</label>
+    <input type="number" id="price" [(ngModel)]="product.price" />
+  </div>
+
+  <div>
+    <label for="image">Image url</label>
+    <input type="text" id="image" [(ngModel)]="product.imageLink" />
+  </div>
+
+  <div>
+    <label for="isPremium">Is premium</label>
+    <input type="checkbox" id="isPremium" [(ngModel)]="product.isPremium" />
+  </div>
+
+  <div>
+    <label for="isAvailable">Is available</label>
+    <input type="checkbox" id="isAvailable" [(ngModel)]="product.isAvailable" />
+  </div>
+
+  <button type="button" (click)="editProduct()">Edit Product</button>
+</ng-container>
