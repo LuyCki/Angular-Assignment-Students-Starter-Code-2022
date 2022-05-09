@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { ProductService } from '../core/product.service';
-import { Product } from '../product/product';
+import { Component } from '@angular/core';
+import { Product } from '../core/models/product';
+import { ProductService } from '../core/services/product.service';
 
 @Component({
   selector: 'app-create-product',
@@ -21,11 +21,9 @@ export class CreateProductComponent {
 
   public products: any;
 
-  constructor(private readonly productService: ProductService) {
-    this.productService.products$.subscribe((products: Product[]) => this.products = products);
-   }
+  constructor(private readonly productService: ProductService) { }
 
   public addProduct(): void {
-    this.productService.addProduct({ ...this.product, created: new Date, id: Date.now() + Math.random() });
+    this.productService.addProduct({ ...this.product, created: new Date });
   }
 }

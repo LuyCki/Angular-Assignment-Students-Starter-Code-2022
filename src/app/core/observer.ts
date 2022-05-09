@@ -1,7 +1,8 @@
 import { ISubject } from "./subject";
 
 export interface IObserver<T> {
-  next(): void
+  next(): void;
+  unsubscribe(): void;
 }
 
 export class Observer<T> implements IObserver<T> {
@@ -15,5 +16,9 @@ export class Observer<T> implements IObserver<T> {
 
   public next(): void {
     this.callback(this.subject.getState());
+  }
+
+  public unsubscribe(): void {
+    this.subject.unsubscribe(this);
   }
 }

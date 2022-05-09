@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Title1",
+      "description": "Description1",
+      "price": 100,
+      "imageLink": "https://picsum.photos/200/300",
+      "isPremium": true,
+      "isAvailable": true,
+      "created": "1651844451232"
+    },
+    {
+      "id": 2,
+      "title": "Title2",
+      "description": "Description2",
+      "price": 200,
+      "imageLink": "https://picsum.photos/200/300",
+      "isPremium": true,
+      "isAvailable": true,
+      "created": "1651844451232"
+    },
+    {
+      "id": 3,
+      "title": "",
+      "description": "",
+      "price": 0,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": false,
+      "created": "2022-05-06T14:36:39.122Z"
+    },
+    {
+      "id": 4,
+      "title": "sadfasdf",
+      "description": "",
+      "price": 0,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": false,
+      "created": "2022-05-06T14:37:14.040Z"
+    },
+    {
+      "id": 5,
+      "title": "New product",
+      "description": "asdads",
+      "price": 123123,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-06T14:38:17.674Z"
+    },
+    {
+      "id": 6,
+      "title": "New product 2",
+      "description": "asdads",
+      "price": 123123,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-06T14:38:57.729Z"
+    },
+    {
+      "id": 7,
+      "title": "ajhdj",
+      "description": "kjhkj",
+      "price": 0,
+      "imageLink": "kjhk",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-06T14:44:01.652Z"
+    },
+    {
+      "id": 8,
+      "title": "fdsgsdfgsdfg",
+      "description": "sdfasdfasdf",
+      "price": 0,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-06T14:45:20.077Z"
+    },
+    {
+      "id": 9,
+      "title": "fdsgsdfgsdfg",
+      "description": "sdfasdfasdf",
+      "price": 0,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-06T14:45:22.876Z"
+    },
+    {
+      "id": 10,
+      "title": "fdsgsdfgsdfg",
+      "description": "sdfasdfasdf",
+      "price": 0,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-06T14:45:23.709Z"
+    }
+  ]
+}
