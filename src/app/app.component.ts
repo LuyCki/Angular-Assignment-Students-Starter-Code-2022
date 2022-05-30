@@ -1,18 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from './core/services/product.service';
-import { Product } from './core/models/product';
+import { Component } from '@angular/core';
+import { forkJoin } from 'rxjs';
+import { HttpService } from './core/api/http.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  public products: Product[] = [];
+export class AppComponent {
+  constructor(private readonly httpService: HttpService) {
+    // Example forkjoin
+    forkJoin([this.httpService.get('/products'), this.httpService.get('/user')])
+      .subscribe(([products, user]) => {
+        console.log(Date.now());
 
-  constructor(public readonly productService: ProductService) {}
+        console.log(products);
+        console.log(user);
+      })
 
-  public ngOnInit(): void {
-    this.productService.getProducts();
+    // this.httpService.get('/products').subscribe((products) => {
+    //   console.log(Date.now(), products);
+    // })
+
+    // this.httpService.get('/user').subscribe((user) => {
+    //   console.log(Date.now(), user);
+    // })
   }
 }

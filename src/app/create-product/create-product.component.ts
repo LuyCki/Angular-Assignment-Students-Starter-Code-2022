@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Product } from '../core/models/product';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ProductService } from '../core/services/product.service';
 
 @Component({
@@ -7,23 +7,25 @@ import { ProductService } from '../core/services/product.service';
   templateUrl: './create-product.component.html',
   styleUrls: ['./create-product.component.scss']
 })
-export class CreateProductComponent {
-  public product: Product = {
-    id: 0,
-    title: '',
-    description: '',
-    price: 0,
-    imageLink: '',
-    isPremium: false,
-    isAvailable: false,
-    created: new Date
-  };
+export class CreateProductComponent implements OnInit {
+  public productForm!: FormGroup;
 
-  public products: any;
+  constructor(private readonly productService: ProductService, private readonly formBuilder: FormBuilder) { }
 
-  constructor(private readonly productService: ProductService) { }
+  ngOnInit(): void {
+    this.productForm = this.formBuilder.group(
+      {
+        title: ['', Validators.required],
+        description: ['', Validators.required],
+        price: [0, [Validators.required, Validators.min(1)]],
+        imageLink: ['', Validators.required],
+        isPremium: [false, Validators.requiredTrue],
+        isAvailable: [false, Validators.requiredTrue]
+      }
+    )
+  }
 
   public addProduct(): void {
-    this.productService.addProduct({ ...this.product, created: new Date });
+    this.productService.addProduct({ ...this.productForm.value, created: new Date });
   }
 }

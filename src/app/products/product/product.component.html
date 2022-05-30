@@ -1,5 +1,5 @@
 <ng-container *ngIf="product?.isAvailable">
-  <h1 [ngClass]="product?.isPremium ? 'isPremium' : ''">
+  <h1 (click)="goToProductInfo()" [ngClass]="product?.isPremium ? 'isPremium' : ''">
     {{ product?.title }}
   </h1>
 

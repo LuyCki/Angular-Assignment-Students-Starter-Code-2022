@@ -1,26 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Title1",
-      "description": "Description1",
-      "price": 100,
-      "imageLink": "https://picsum.photos/200/300",
-      "isPremium": true,
-      "isAvailable": true,
-      "created": "1651844451232"
-    },
-    {
-      "id": 2,
-      "title": "Title2",
-      "description": "Description2",
-      "price": 200,
-      "imageLink": "https://picsum.photos/200/300",
-      "isPremium": true,
-      "isAvailable": true,
-      "created": "1651844451232"
-    },
-    {
       "id": 3,
       "title": "",
       "description": "",
@@ -41,64 +21,69 @@
       "created": "2022-05-06T14:37:14.040Z"
     },
     {
-      "id": 5,
-      "title": "New product",
-      "description": "asdads",
+      "title": "Second product",
+      "description": "Second description",
+      "price": 11,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-20T13:26:09.703Z",
+      "id": 6
+    },
+    {
+      "title": "3",
+      "description": "1",
+      "price": 11,
+      "imageLink": "",
+      "isPremium": false,
+      "isAvailable": true,
+      "created": "2022-05-20T13:26:12.411Z",
+      "id": 7
+    },
+    {
+      "title": "4",
+      "description": "1",
+      "price": 11,
+      "imageLink": "",
+      "isPremium": true,
+      "isAvailable": true,
+      "created": "2022-05-20T13:26:14.656Z",
+      "id": 8
+    },
+    {
+      "title": "asdasf",
+      "description": "asdf",
+      "price": 12312,
+      "imageLink": "sdfa",
+      "isPremium": true,
+      "isAvailable": true,
+      "created": "2022-05-26T13:55:40.112Z",
+      "id": 9
+    },
+    {
+      "title": "asdfasdf",
+      "description": "asdfasdf",
       "price": 123123,
-      "imageLink": "",
-      "isPremium": false,
+      "imageLink": "sdasd",
+      "isPremium": true,
       "isAvailable": true,
-      "created": "2022-05-06T14:38:17.674Z"
+      "created": "2022-05-26T14:04:47.681Z",
+      "id": 10
     },
     {
-      "id": 6,
-      "title": "New product 2",
-      "description": "asdads",
-      "price": 123123,
-      "imageLink": "",
-      "isPremium": false,
-      "isAvailable": true,
-      "created": "2022-05-06T14:38:57.729Z"
+      "id": 11
     },
     {
-      "id": 7,
-      "title": "ajhdj",
-      "description": "kjhkj",
-      "price": 0,
-      "imageLink": "kjhk",
-      "isPremium": false,
-      "isAvailable": true,
-      "created": "2022-05-06T14:44:01.652Z"
+      "id": 12
     },
     {
-      "id": 8,
-      "title": "fdsgsdfgsdfg",
-      "description": "sdfasdfasdf",
-      "price": 0,
-      "imageLink": "",
-      "isPremium": false,
-      "isAvailable": true,
-      "created": "2022-05-06T14:45:20.077Z"
+      "id": 13
     },
     {
-      "id": 9,
-      "title": "fdsgsdfgsdfg",
-      "description": "sdfasdfasdf",
-      "price": 0,
-      "imageLink": "",
-      "isPremium": false,
-      "isAvailable": true,
-      "created": "2022-05-06T14:45:22.876Z"
-    },
-    {
-      "id": 10,
-      "title": "fdsgsdfgsdfg",
-      "description": "sdfasdfasdf",
-      "price": 0,
-      "imageLink": "",
-      "isPremium": false,
-      "isAvailable": true,
-      "created": "2022-05-06T14:45:23.709Z"
+      "id": 14
     }
-  ]
+  ],
+  "user": {
+    "username": "Lucian"
+  }
 }

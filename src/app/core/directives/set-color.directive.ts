@@ -2,15 +2,15 @@ import { Directive, ElementRef, HostListener, Input, OnChanges, SimpleChanges } 
 
 @Directive({ selector: '[setColor]' })
 export class SetColorDirective implements OnChanges {
-  @Input() public setColor: string | undefined;
-  @Input() public defaultColor: string | undefined;
   @Input() public backgroundColor: string | undefined;
-
-  @HostListener('mouseenter') onMouseEnter() {
-    this.el.nativeElement.style.backgroundColor = this.backgroundColor;
-  }
+  @Input() public defaultColor: string | undefined;
+  @Input() public setColor: string | undefined;
 
   constructor(private readonly el: ElementRef) { }
+
+  @HostListener('mouseenter') private onMouseEnter() {
+    this.el.nativeElement.style.backgroundColor = this.backgroundColor;
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['setColor'].currentValue) {

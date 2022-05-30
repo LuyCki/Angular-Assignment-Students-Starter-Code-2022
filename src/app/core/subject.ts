@@ -8,8 +8,17 @@ export interface ISubject<T> {
 }
 
 export class Subject<T> implements ISubject<T> {
-  private state!: T;
   private observers: IObserver<T>[] = [];
+  private state!: T;
+
+  public getState(): T {
+    return this.state;
+  }
+
+  public next(state: T): void {
+    this.state = state;
+    this.observers.forEach((observer: IObserver<T>) => observer.next())
+  }
 
   public subscribe(callback: any): IObserver<T> {
     const observer = new Observer(callback, this);
@@ -18,18 +27,9 @@ export class Subject<T> implements ISubject<T> {
     return observer;
   }
 
-  public next(state: T): void {
-    this.state = state;
-    this.observers.forEach((observer: IObserver<T>) => observer.next())
-  }
-
   public unsubscribe(observer: IObserver<T>): void {
     const observerIndex = this.observers.indexOf(observer);
 
     this.observers.splice(observerIndex, 1);
-  }
-
-  public getState(): T {
-    return this.state;
   }
 }

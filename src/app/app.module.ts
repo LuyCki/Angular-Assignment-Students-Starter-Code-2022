@@ -1,27 +1,25 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { CreateProductComponent } from './create-product/create-product.component';
-import { SetColorDirective } from './core/directives/set-color.directive';
-import { EditProductComponent } from './edit-product/edit-product.component';
+import { AppRoutingModule } from './app-routing.module';
+import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProductComponent,
-    CreateProductComponent,
-    SetColorDirective,
-    EditProductComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

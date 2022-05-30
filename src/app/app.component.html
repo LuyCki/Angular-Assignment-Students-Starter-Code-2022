@@ -1,4 +1,9 @@
-<app-create-product></app-create-product>
 
-<app-product *ngFor="let product of productService.products$ | async" [product]="product"></app-product>
+<nav>
+  <ul>
+    <li><a routerLink="/products" routerLinkActive="my-active-link">My products list</a></li>
+    <li><a routerLink="/create-product" routerLinkActive="my-active-link">Create a product</a></li>
+  </ul>
+</nav>
 
+<router-outlet></router-outlet>
